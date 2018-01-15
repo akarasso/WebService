@@ -1,0 +1,11 @@
+class RscTitles
+{
+
+};
+
+class CfgCommands
+{
+	allowedHTMLLoadURIs[] = {
+		"*localhost*"
+	};
+};
