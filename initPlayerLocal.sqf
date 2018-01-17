@@ -1,7 +1,11 @@
 call compile preprocessFileLineNumbers "oo_WebService.sqf";
-call compile preprocessFileLineNumbers "oo_Discord.sqf";
 waitUntil {!isNull(findDisplay 46)};
 
-
-private _discord = ["new", "http://localhost:8080/"] call oo_Discord;
-["sendGlobal","Hello world!"] call _discord;
+private _webservice = ["new", "http://localhost:8080/"] call oo_WebService;
+private _arr = [
+	["action", "update"],
+	["table", "users"],
+	["id", getPlayerUID]
+];
+["putParam", _arr] call _webservice;
+"call" _webservice;

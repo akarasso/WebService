@@ -202,7 +202,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MEMBER(memberStr,args) CALLCLASS(_class,memberStr,args,2)
 #define SPAWN_MEMBER(memberStr,args) SPAWNCLASS(_class,memberStr,args,2)
 #define SUPER(memberStr,args) CALLCLASS_FROMCHILD(_parentClass,memberStr,args,1, _class)
-// #define SUPER(memberStr,args) CALLCLASS(_parentClass,memberStr,args,2)
 
 /*
 	Macro:  NEW(class, args)
