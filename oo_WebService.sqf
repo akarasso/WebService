@@ -122,4 +122,16 @@ CLASS("oo_WebService")
 		}; 		
 	};
 
+	PUBLIC FUNCTION("","getKeepInMemory") {
+		MEMBER("KeepInMemory", nil);
+	};
+	PUBLIC FUNCTION("scalar","setKeepInMemory") {
+		MEMBER("KeepInMemory", _this);
+	};
+	PUBLIC FUNCTION("","getTimeOut") {
+		MEMBER("TimeOut", nil);
+	};
+	PUBLIC FUNCTION("scalar","setTimeOut") {
+		MEMBER("TimeOut", _this);
+	};
 ENDCLASS;

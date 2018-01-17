@@ -5,7 +5,11 @@ private _webservice = ["new", "http://localhost:8080/"] call oo_WebService;
 private _arr = [
 	["action", "update"],
 	["table", "users"],
-	["id", getPlayerUID]
+	["id", getPlayerUID player]
 ];
 ["putParam", _arr] call _webservice;
-"call" _webservice;
+private _index = "call" call _webservice;
+hint format["Index:%1",_index];
+sleep 1;
+private _data = ["getStatus", _index] call _webservice;
+hint format["Data:%1",_data];
